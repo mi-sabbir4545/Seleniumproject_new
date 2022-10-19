@@ -9,6 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 serv_obj = Service("D:\Webdriver\chromedriver.exe")
 driver = webdriver.Chrome(service=serv_obj)
+driver.implicitly_wait(10)
 
 mywait = WebDriverWait(driver, 10, poll_frequency=2, ignored_exceptions=[NoSuchElementException,
                                                                          ElementNotVisibleException,

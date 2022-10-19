@@ -1,3 +1,4 @@
+import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -12,8 +13,11 @@ driver.maximize_window()
 #print("Display status:",searchbox.is_displayed())
 #print("Enabled status:",searchbox.is_enabled())
 
+time.sleep(4)
 rd_male=driver.find_element(By.XPATH, "//input[@id='gender-male']")
+time.sleep(4)
 rd_female=driver.find_element(By.XPATH, "//input[@id='gender-female']")
+time.sleep(4)
 
 print("Default status")
 print(rd_male.is_selected())
